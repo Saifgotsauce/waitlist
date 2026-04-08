@@ -1,0 +1,20 @@
+{
+  "name": "commitmail-waitlist",
+  "version": "1.0.0",
+  "description": "CommitMail waitlist landing page with Vercel Web Analytics and Speed Insights",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "preview": "npx serve ."
+  },
+  "keywords": [
+    "waitlist",
+    "landing-page",
+    "vercel-analytics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
