@@ -240,7 +240,7 @@ footer a:hover{color:var(--purple)}
 <body>
 
 <nav>
-  <a href="./commitmail.html" class="wordmark">CommitMail</a>
+  <a href="#" class="wordmark" onclick="goToWaitlist(event)">CommitMail</a>
 </nav>
 
 <div class="main">
@@ -281,7 +281,7 @@ footer a:hover{color:var(--purple)}
       <div class="share-buttons">
         <a href="#" class="share-btn" id="share-twitter" target="_blank">Share on X</a>
         <a href="#" class="share-btn" id="share-wa" target="_blank">WhatsApp</a>
-        <a class="share-btn" onclick="copyLink()">Copy link</a>
+        <a href="#" class="share-btn" onclick="copyLink(event)">Copy link</a>
       </div>
     </div>
 
@@ -366,9 +366,20 @@ function copyLink() {
   });
 }
 
+function goToWaitlist(event) {
+  event.preventDefault();
+  document.getElementById('success-view').classList.remove('visible');
+  document.getElementById('signup-view').style.display = 'block';
+
+  const btn = document.querySelector('.signup-form button');
+  btn.textContent = "I'm in →";
+  btn.disabled = false;
+}
 // Handle enter key
 document.getElementById('email-input').addEventListener('keydown', function(e) {
   if (e.key === 'Enter') submitWaitlist();
+
+  
 });
 </script>
 
